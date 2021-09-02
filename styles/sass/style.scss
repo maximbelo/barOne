@@ -1,7 +1,7 @@
 @import "setup";
 @import "vars";
 
-/* ----------Typography ---------- */
+/* ----------Typography---------- */
 /*font-family: 'Chathura', sans-serif;
 font-family: 'Tulpen One', cursive;
 */
@@ -30,6 +30,7 @@ h1 {
   font-size: 261.4px;
   text-align: left;
   letter-spacing: 2.4px;
+  font-weight: initial;
 }
 
 h1 span {
@@ -41,13 +42,26 @@ h1 span {
   letter-spacing: 2.6px;
 }
 
-/* ----------Header ---------- */
+/* ----------General---------- */
+body {
+  max-width: 1650px;
+  margin: 0 auto;
+  background: $black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+/* ----------Header---------- */
 header {
-  background: url(./../bar-final-assets/header-box.jpg);
+  background: url(./../bar-final-assets/home-image-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-bottom: 25%;
   color: $offWhite;
 }
 
@@ -73,6 +87,7 @@ nav {
     text-decoration: none;
     display: block;
     color: $offWhite;
+    transition: color 0.3s ease;
   }
 
   a:focus,
@@ -89,7 +104,16 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  padding-top: 10%;
+}
+
+.welcomeTitle {
+  display: flex;
+  align-items: center;
   padding-top: 15%;
+  position: absolute;
+  z-index: 2;
 
   h1 {
     color: $dustyOrange;
@@ -100,4 +124,45 @@ nav {
     color: $offWhite;
     padding: 3rem 0.4rem;
   }
+}
+
+.welcomeImage {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 0 auto;
+  position: relative;
+  top: 7rem;
+}
+
+/* ----------.siteSummary---------- */
+.siteSummary {
+  background: $black;
+  color: $offWhite;
+  padding-top: 10%;
+  margin: 5%;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  li {
+    flex-basis: 50%;
+    margin-bottom: 1rem;
+  }
+
+  i {
+    background: $rustRed;
+    padding: 0.5rem;
+    width: calc(2.4rem + 0.4vw);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.siteSummary p {
+  padding-left: 10%;
+  margin-top: 1rem;
 }

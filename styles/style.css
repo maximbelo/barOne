@@ -262,7 +262,7 @@ template {
   overflow: hidden;
 }
 
-/* ----------Typography ---------- */
+/* ----------Typography---------- */
 /*font-family: 'Chathura', sans-serif;
 font-family: 'Tulpen One', cursive;
 */
@@ -291,6 +291,7 @@ h1 {
   font-size: 261.4px;
   text-align: left;
   letter-spacing: 2.4px;
+  font-weight: initial;
 }
 
 h1 span {
@@ -302,13 +303,26 @@ h1 span {
   letter-spacing: 2.6px;
 }
 
-/* ----------Header ---------- */
+/* ----------General---------- */
+body {
+  max-width: 1650px;
+  margin: 0 auto;
+  background: #111010;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+/* ----------Header---------- */
 header {
-  background: url(./../bar-final-assets/header-box.jpg);
+  background: url(./../bar-final-assets/home-image-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-bottom: 25%;
   color: #ffffff;
 }
 
@@ -342,6 +356,8 @@ nav {
   text-decoration: none;
   display: block;
   color: #ffffff;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .navbarLinks ul a:focus,
 .navbarLinks ul a:hover {
@@ -362,13 +378,74 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 15%;
+  position: relative;
+  padding-top: 10%;
 }
-.welcome h1 {
+
+.welcomeTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15%;
+  position: absolute;
+  z-index: 2;
+}
+.welcomeTitle h1 {
   color: #ff8327;
 }
-.welcome h1 span {
+.welcomeTitle h1 span {
   display: block;
   color: #ffffff;
   padding: 3rem 0.4rem;
+}
+
+.welcomeImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  position: relative;
+  top: 7rem;
+}
+
+/* ----------.siteSummary---------- */
+.siteSummary {
+  background: #111010;
+  color: #ffffff;
+  padding-top: 10%;
+  margin: 5%;
+}
+.siteSummary ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+.siteSummary li {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-bottom: 1rem;
+}
+.siteSummary i {
+  background: #bf2603;
+  padding: 0.5rem;
+  width: calc(2.4rem + 0.4vw);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.siteSummary p {
+  padding-left: 10%;
+  margin-top: 1rem;
 }
