@@ -162,11 +162,16 @@ nav {
   top: 7rem;
 }
 
+.hamburgerMenu {
+  display: none;
+}
+
 /* ----------.siteSummary section---------- */
 .siteSummary {
   background: $black;
   color: $offWhite;
-  padding: 12% 5% 3% 5%;
+  padding: 12% 5% 5% 5%;
+  margin-top: 4rem;
 
   ul {
     display: flex;
@@ -279,7 +284,7 @@ nav {
 
 .events {
   display: flex;
-  padding: 0 10%;
+  margin: 0 10%;
 }
 
 .eventsImg img {
@@ -322,5 +327,145 @@ footer {
     margin: 0 auto;
     text-align: center;
     line-height: normal;
+  }
+}
+
+/* ----------Footer---------- */
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .welcome {
+    padding: 25% 0;
+  }
+
+  .welcomeImage {
+    display: none;
+  }
+
+  .siteSummary {
+    margin-top: 0;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .siteSummary {
+    margin-top: 0;
+    padding: 12% 5% 12% 5%;
+  }
+
+  .siteSummary ul {
+    flex-direction: column;
+  }
+
+  .siteSummary li {
+    text-align: center;
+  }
+
+  .siteSummary li p {
+    padding: 0;
+  }
+
+  .additionalInfo {
+    grid-template-columns: 1fr;
+    padding-bottom: 13%;
+  }
+
+  .gridItem4 {
+    grid-row: 3/4;
+  }
+
+  .planAheadImg img,
+  .newLocationsImg img {
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+  }
+
+  .planAheadText {
+    text-align: center;
+    margin: 0;
+    padding: 0 3%;
+  }
+
+  .planAheadText h3 {
+    padding: 0;
+  }
+
+  .newLocationsText {
+    text-align: center;
+    margin: 0;
+    padding: 0 3%;
+  }
+
+  .newLocationsText p {
+    text-align: center;
+  }
+
+  .events {
+    flex-direction: column;
+  }
+
+  .eventsImg img {
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+      0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+  }
+
+  .eventsText {
+    text-align: center;
+    padding: 10% 0 5% 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbarLinks {
+    margin-bottom: 2rem;
+  }
+
+  .brandTitle {
+    padding: 1rem 0.3rem;
+  }
+
+  .imageGallery ul li:nth-last-of-type(2) {
+    display: none;
+  }
+
+  .imageGallery ul li {
+    padding: 0 0.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbarLinks ul {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .fas {
+    font-size: 30px;
+    transition: $transitionEffect;
+  }
+
+  .fas:focus,
+  .fas:hover {
+    color: $dustyOrange;
+    cursor: pointer;
+  }
+
+  .brandTitle {
+    padding: 2rem 0;
+  }
+
+  .welcomeTitle h1 {
+    font-size: 150px;
+  }
+
+  .welcomeTitle h1 span {
+    font-size: 55px;
+    padding: 1rem 0;
   }
 }

@@ -444,11 +444,16 @@ nav {
   top: 7rem;
 }
 
+.hamburgerMenu {
+  display: none;
+}
+
 /* ----------.siteSummary section---------- */
 .siteSummary {
   background: #111010;
   color: #ffffff;
-  padding: 12% 5% 3% 5%;
+  padding: 12% 5% 5% 5%;
+  margin-top: 4rem;
 }
 .siteSummary ul {
   display: -webkit-box;
@@ -568,7 +573,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 10%;
+  margin: 0 10%;
 }
 
 .eventsImg img {
@@ -611,4 +616,154 @@ footer p {
   margin: 0 auto;
   text-align: center;
   line-height: normal;
+}
+
+/* ----------Footer---------- */
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .welcome {
+    padding: 25% 0;
+  }
+
+  .welcomeImage {
+    display: none;
+  }
+
+  .siteSummary {
+    margin-top: 0;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .siteSummary {
+    margin-top: 0;
+    padding: 12% 5% 12% 5%;
+  }
+
+  .siteSummary ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .siteSummary li {
+    text-align: center;
+  }
+
+  .siteSummary li p {
+    padding: 0;
+  }
+
+  .additionalInfo {
+    grid-template-columns: 1fr;
+    padding-bottom: 13%;
+  }
+
+  .gridItem4 {
+    grid-row: 3/4;
+  }
+
+  .planAheadImg img,
+.newLocationsImg img {
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+  }
+
+  .planAheadText {
+    text-align: center;
+    margin: 0;
+    padding: 0 3%;
+  }
+
+  .planAheadText h3 {
+    padding: 0;
+  }
+
+  .newLocationsText {
+    text-align: center;
+    margin: 0;
+    padding: 0 3%;
+  }
+
+  .newLocationsText p {
+    text-align: center;
+  }
+
+  .events {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .eventsImg img {
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+  }
+
+  .eventsText {
+    text-align: center;
+    padding: 10% 0 5% 0;
+  }
+}
+@media (max-width: 680px) {
+  .navbarLinks {
+    margin-bottom: 2rem;
+  }
+
+  .brandTitle {
+    padding: 1rem 0.3rem;
+  }
+
+  .imageGallery ul li:nth-last-of-type(2) {
+    display: none;
+  }
+
+  .imageGallery ul li {
+    padding: 0 0.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .navbarLinks ul {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+
+  .fas {
+    font-size: 30px;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+
+  .fas:focus,
+.fas:hover {
+    color: #ff8327;
+    cursor: pointer;
+  }
+
+  .brandTitle {
+    padding: 2rem 0;
+  }
+
+  .welcomeTitle h1 {
+    font-size: 150px;
+  }
+
+  .welcomeTitle h1 span {
+    font-size: 55px;
+    padding: 1rem 0;
+  }
 }
