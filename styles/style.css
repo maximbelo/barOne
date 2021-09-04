@@ -531,6 +531,7 @@ nav {
 .newLocationsText {
   text-align: right;
   margin-left: 5%;
+  margin-top: 10%;
 }
 
 .newLocationsText p {
@@ -682,7 +683,7 @@ footer p {
 
   .newLocationsText {
     text-align: center;
-    margin: 0;
+    margin-left: 0;
     padding: 0 3%;
   }
 
@@ -714,6 +715,10 @@ footer p {
 
   .brandTitle {
     padding: 1rem 0.3rem;
+  }
+
+  .imageGallery {
+    padding: 14% 0;
   }
 
   .imageGallery ul li:nth-last-of-type(2) {
