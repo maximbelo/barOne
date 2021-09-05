@@ -1,0 +1,35 @@
+body {
+  max-width: 1650px;
+  margin: 0 auto;
+  background: $black;
+  color: $offWhite;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Tulpen One", cursive;
+  text-align: center;
+  color: $offWhite;
+  background: $rustRed;
+  padding: 0.8rem 2.1rem;
+  transition: color, background-color 0.3s ease;
+}
+
+.btn:focus,
+.btn:hover {
+  background: $offWhite;
+  color: $rustRed;
+}

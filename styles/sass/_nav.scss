@@ -1,0 +1,64 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 5%;
+}
+
+.navbarLinks ul {
+  display: flex;
+  align-items: center;
+
+  li {
+    list-style: none;
+    padding: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    color: $offWhite;
+    transition: $transitionEffect;
+  }
+
+  a:focus,
+  a:hover {
+    color: $dustyOrange;
+  }
+}
+
+.brandTitle {
+  padding: 2rem;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navbarLinks ul {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .fas {
+    font-size: 30px;
+    transition: $transitionEffect;
+  }
+
+  .fas:focus,
+  .fas:hover {
+    color: $dustyOrange;
+    cursor: pointer;
+  }
+
+  .brandTitle {
+    padding: 2rem 0;
+  }
+}

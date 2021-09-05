@@ -1,39 +1,16 @@
 @import "setup";
 @import "vars";
+@import "typography";
+@import "general";
+@import "nav";
+@import "footer";
+
+/* ----------HOME PAGE STYLES---------- */
 
 /* ----------Typography---------- */
 /*font-family: 'Chathura', sans-serif;
 font-family: 'Tulpen One', cursive;
 */
-
-body {
-  font-family: "Chathura", sans-serif;
-  font-size: 39px;
-  line-height: 30px;
-  letter-spacing: 1.9px;
-}
-
-header nav {
-  font-family: "Chathura", sans-serif;
-  font-size: 38px;
-  text-align: center;
-  line-height: 29px;
-  letter-spacing: 1.9px;
-}
-
-.brandTitle {
-  font-family: "Tulpen One", cursive;
-  font-size: 45px;
-}
-
-h1 {
-  font-family: "Tulpen One", cursive;
-  font-size: 261.4px;
-  text-align: left;
-  letter-spacing: 2.4px;
-  font-weight: initial;
-}
-
 h1 span {
   font-family: "Chathura", sans-serif;
   font-size: 83.2px;
@@ -43,89 +20,16 @@ h1 span {
   letter-spacing: 2.6px;
 }
 
-h3 {
-  font-family: "Chathura", sans-serif;
-  font-size: 68px;
-  font-weight: bold;
-  letter-spacing: 2.2px;
-}
-
-/* ----------General---------- */
-body {
-  max-width: 1650px;
-  margin: 0 auto;
-  background: $black;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  font-family: "Tulpen One", cursive;
-  text-align: center;
-  color: $offWhite;
-  background: $rustRed;
-  padding: 0.8rem 2.1rem;
-  transition: color, background-color 0.3s ease;
-}
-
-.btn:focus,
-.btn:hover {
-  background: $offWhite;
-  color: $rustRed;
+.siteSummary h2 {
+  letter-spacing: 0;
 }
 
 /* ----------Header---------- */
-header {
+.homeWrapper {
   background: url(./../bar-final-assets/home-image-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  color: $offWhite;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 5%;
-}
-
-.navbarLinks ul {
-  display: flex;
-  align-items: center;
-
-  li {
-    list-style: none;
-    padding: 1rem;
-  }
-
-  a {
-    text-decoration: none;
-    display: block;
-    color: $offWhite;
-    transition: $transitionEffect;
-  }
-
-  a:focus,
-  a:hover {
-    color: $dustyOrange;
-  }
-}
-
-.brandTitle {
-  padding: 2rem;
 }
 
 .welcome {
@@ -162,14 +66,9 @@ nav {
   top: 7rem;
 }
 
-.hamburgerMenu {
-  display: none;
-}
-
 /* ----------.siteSummary section---------- */
 .siteSummary {
   background: $black;
-  color: $offWhite;
   padding: 12% 5% 5% 5%;
   margin-top: 4rem;
 
@@ -217,7 +116,6 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem 10rem;
   background: $darkRed;
-  color: $offWhite;
   padding-bottom: 5%;
 
   p {
@@ -262,7 +160,6 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: $offWhite;
   margin: 10% 0;
 
   h3 {
@@ -298,7 +195,6 @@ nav {
 }
 
 /* ----------.imageGallery section---------- */
-
 .imageGallery {
   background: $darkRed;
   padding: 8% 0;
@@ -317,23 +213,249 @@ nav {
     }
   }
 }
+/* ----------BLOG PAGE STYLES---------- */
+/* ----------Typography---------- */
+.blogWelcome h1 {
+  font-family: "Chathura", sans-serif;
+  font-size: 83.2px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 94.7px;
+  letter-spacing: 2.6px;
+}
 
-/* ----------Footer---------- */
+.commentForm input,
+textarea {
+  font-family: "Chathura", sans-serif;
+  font-size: 39px;
+  line-height: 30px;
+  letter-spacing: 1.9px;
+}
 
-footer {
-  background: #474747;
+/* ----------Header---------- */
+.blogWrapper {
+  background: url(./../bar-final-assets/blog-header-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
-  p {
-    color: $offWhite;
-    margin: 0 auto;
-    text-align: center;
-    line-height: normal;
+.blogWelcome h1 {
+  margin: 10% 5%;
+  display: inline-block;
+}
+
+/* ----------.missionAndNewMenu---------- */
+.missionAndNewMenu {
+  display: flex;
+}
+
+.missionContainer {
+  padding: 8% 7%;
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  background: $darkRed;
+  padding: 1rem;
+  width: 400px;
+}
+
+.missionText ul {
+  padding-left: 1rem;
+}
+
+.missionText li {
+  list-style: none;
+
+  &:before {
+    content: "· ";
+    font-size: 3rem;
+    vertical-align: bottom;
+    position: relative;
+    top: 0.5rem;
+    color: $rustRed;
   }
 }
 
-/* ----------Footer---------- */
+.missionText li a {
+  text-decoration: none;
+  color: $offWhite;
+
+  &:focus,
+  &:hover {
+    color: $dustyOrange;
+  }
+}
+
+.missionImage img {
+  width: 137%;
+  position: relative;
+  right: 6.7rem;
+  bottom: 2rem;
+}
+
+.missionText p {
+  margin: 0;
+}
+
+.findOutMore {
+  text-decoration: none;
+  color: $dustyOrange;
+  display: inline-block;
+  position: relative;
+
+  &:focus,
+  &:hover {
+    color: $rustRed;
+  }
+}
+
+.findOutMore::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 96%;
+  height: 0.1rem;
+  background-color: $dustyOrange;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.findOutMore:hover::after,
+.findOutMore:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+.missionText h2:nth-of-type(2) {
+  padding-top: 2rem;
+}
+
+.newMenuImage {
+  position: relative;
+  bottom: 7rem;
+}
+
+.newMenuImage img {
+  width: 100%;
+  box-shadow: -1.5rem 1.5rem $dustyOrange;
+}
+
+.newMenuText {
+  position: relative;
+  bottom: 6rem;
+  right: 1.5rem;
+  border-left: 5px solid $dustyOrange;
+  border-bottom: 5px solid $dustyOrange;
+  padding: 4rem 4rem 4rem 6rem;
+}
+
+.newMenuText p:nth-of-type(1) {
+  margin: 0;
+  color: $dustyOrange;
+}
+
+/* ----------.commentSection---------- */
+.commentSection {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 4rem;
+}
+
+.comments {
+  flex-basis: 55%;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 250px;
+      height: 130px;
+      padding-right: 2rem;
+    }
+  }
+}
+
+.comments li:nth-of-type(2) {
+  margin: 5rem 0;
+}
+
+.comment1 p:nth-of-type(1),
+.comment2 p:nth-of-type(1) {
+  font-size: 45px;
+  color: $dustyOrange;
+  margin-bottom: 0.5rem;
+}
+
+.comment1 p,
+.comment2 p {
+  margin: 0;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentForm input,
+textarea {
+  background: $black;
+  color: $offWhite;
+  border-color: $dustyOrange;
+}
+
+.commentForm input {
+  border: none;
+  border-bottom: 2px solid $dustyOrange;
+  padding: 1rem 2.8rem;
+}
+
+.commentForm input:nth-of-type(1) {
+  margin-right: 0.8rem;
+}
+
+.commentForm input:nth-of-type(2) {
+  margin-left: 0.8rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $offWhite;
+  opacity: 1;
+}
+
+.commentForm textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  padding: 2rem 3rem;
+  margin-top: 2rem;
+}
+
+.nameAndEmail {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button.btn {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+button.btn:focus,
+button.btn:hover {
+  cursor: pointer;
+}
+
+/* ----------Media Queries---------- */
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
+  /* ---Home Page--- */
   .welcome {
     padding: 25% 0;
   }
@@ -349,6 +471,7 @@ footer {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  /* ---Home Page--- */
   .siteSummary {
     margin-top: 0;
     padding: 12% 5% 12% 5%;
@@ -368,7 +491,7 @@ footer {
 
   .additionalInfo {
     grid-template-columns: 1fr;
-    padding-bottom: 13%;
+    padding-bottom: 20%;
   }
 
   .gridItem4 {
@@ -417,12 +540,13 @@ footer {
 }
 
 @media (max-width: 680px) {
+  /* ---Home Page--- */
   .navbarLinks {
     margin-bottom: 2rem;
   }
 
   .brandTitle {
-    padding: 1rem 0.3rem;
+    padding: 1rem 0.2rem;
   }
   .imageGallery {
     padding: 14% 0;
@@ -437,38 +561,13 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .navbarLinks ul {
-    display: none;
-  }
-
-  .hamburgerMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .fas {
-    font-size: 30px;
-    transition: $transitionEffect;
-  }
-
-  .fas:focus,
-  .fas:hover {
-    color: $dustyOrange;
-    cursor: pointer;
-  }
-
-  .brandTitle {
-    padding: 2rem 0;
-  }
-
+  /* ---Home Page--- */
   .welcomeTitle h1 {
     font-size: 150px;
   }
 
   .welcomeTitle h1 span {
     font-size: 55px;
-    padding: 1rem 0;
+    padding: 1rem 0.1rem;
   }
 }
