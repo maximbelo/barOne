@@ -42,8 +42,65 @@
           <div class="hamurgerMenu"><i class="fas fa-bars"></i></div>
         </div>
       </nav>
-      <footer>
-        <p class="copyright">Copyright <span>&#169;</span> 2021 Juno College</p>
-      </footer>
+
+      <div class="contactWelcome">
+        <h1>Get in Touch</h1>
+      </div>
+    </header>
+    <main>
+      <section class="getInTouch">
+        <div class="socialsContactContainer">
+          <div class="socialsAndContactInfo">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <p><a href="#">info@email.com</a></p>
+
+            <p>123 - 456 - 7890</p>
+            <p>123 Queen Street West, Unit 10</p>
+            <p>Toronto, Ontario</p>
+            <p>M5V2D5</p>
+          </div>
+        </div>
+        <div class="formContainer">
+          <form action="#" method="POST" class="blogOneForm contactForm">
+            <div class="nameAndEmail">
+              <label for="name" class="sr-only">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
+
+              <label for="email" class="sr-only">Email address:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+
+            <label for="comment" class="sr-only"></label>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Message"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="copyright">Copyright <span>&#169;</span> 2021 Juno College</p>
+    </footer>
   </body>
 </html>

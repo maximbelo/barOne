@@ -27,6 +27,29 @@ h1 {
   font-weight: initial;
 }
 
+.blogWelcome h1,
+.contactWelcome h1 {
+  font-family: "Chathura", sans-serif;
+  font-size: 83.2px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 94.7px;
+  letter-spacing: 2.6px;
+}
+
+h1 span {
+  font-family: "Chathura", sans-serif;
+  font-size: 83.2px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 94.7px;
+  letter-spacing: 2.6px;
+}
+
+.siteSummary h2 {
+  letter-spacing: 0;
+}
+
 h2,
 h3 {
   font-family: "Chathura", sans-serif;
@@ -34,4 +57,12 @@ h3 {
   font-weight: bold;
   letter-spacing: 2.2px;
   line-height: 58px;
+}
+
+.blogOneForm input,
+textarea {
+  font-family: "Chathura", sans-serif;
+  font-size: 39px;
+  line-height: 30px;
+  letter-spacing: 1.9px;
 }

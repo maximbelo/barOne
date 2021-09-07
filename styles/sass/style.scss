@@ -3,24 +3,10 @@
 @import "typography";
 @import "general";
 @import "nav";
+@import "formStyles";
 @import "footer";
 
 /* ----------HOME PAGE STYLES---------- */
-
-/* ----------Typography---------- */
-
-h1 span {
-  font-family: "Chathura", sans-serif;
-  font-size: 83.2px;
-  font-weight: bold;
-  text-align: left;
-  line-height: 94.7px;
-  letter-spacing: 2.6px;
-}
-
-.siteSummary h2 {
-  letter-spacing: 0;
-}
 
 /* ----------Header---------- */
 .homeWrapper {
@@ -214,35 +200,12 @@ h1 span {
 
 /* ----------BLOG PAGE STYLES---------- */
 
-/* ----------Typography---------- */
-.blogWelcome h1 {
-  font-family: "Chathura", sans-serif;
-  font-size: 83.2px;
-  font-weight: bold;
-  text-align: left;
-  line-height: 94.7px;
-  letter-spacing: 2.6px;
-}
-
-.commentForm input,
-textarea {
-  font-family: "Chathura", sans-serif;
-  font-size: 39px;
-  line-height: 30px;
-  letter-spacing: 1.9px;
-}
-
 /* ----------Header---------- */
 .blogWrapper {
   background: url(./../bar-final-assets/blog-header-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.blogWelcome h1 {
-  margin: 10% 5%;
-  display: inline-block;
 }
 
 /* ----------.missionAndNewMenu section---------- */
@@ -397,60 +360,101 @@ textarea {
   margin: 0;
 }
 
-.commentForm {
+.blogForm input,
+.blogForm textarea {
+  background: $black;
+}
+
+.blogForm input {
+  border-bottom: 2px solid $dustyOrange;
+}
+
+.blogForm textarea {
+  border: 2px solid $dustyOrange;
+}
+
+/* ----------CONTACT PAGE STYLES---------- */
+
+/* ----------Header---------- */
+.contactWrapper {
+  background: url(./../bar-final-assets/contact-header-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* ----------.getInTouch section---------- */
+.getInTouch {
+  display: flex;
+}
+
+.socialsContactContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-basis: 35%;
+  margin-top: 9rem;
 }
 
-.commentForm input,
-textarea {
-  background: $black;
+.socialsAndContactInfo .fab {
+  padding-right: 1rem;
   color: $offWhite;
-  border-color: $dustyOrange;
+  transition: $transitionEffect;
+
+  &:focus,
+  &:hover {
+    color: $dustyOrange;
+  }
 }
 
-.commentForm input {
+.socialsAndContactInfo p {
+  margin: 0;
+  padding-bottom: 0.2rem;
+
+  a {
+    text-decoration: none;
+    color: $offWhite;
+    transition: $transitionEffect;
+  }
+}
+
+.socialsAndContactInfo p a:focus,
+.socialsAndContactInfo p a:hover {
+  color: $dustyOrange;
+}
+
+.socialsAndContactInfo p:nth-of-type(1) {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.formContainer {
+  background: $darkRed;
+  position: relative;
+  bottom: 6rem;
+  box-shadow: 1.5rem 1.5rem $dustyOrange;
+}
+
+.contactForm {
+  padding: 2rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  background: $darkRed;
+}
+
+.contactForm input {
+  border-bottom: 3px solid $offWhite;
+}
+
+.contactForm textarea {
+  border: 3px solid $offWhite;
+  height: 250px;
+}
+
+.contactForm button {
   border: none;
-  border-bottom: 2px solid $dustyOrange;
-  padding: 1rem 2.8rem;
-}
-
-.commentForm input:nth-of-type(1) {
-  margin-right: 0.8rem;
-}
-
-.commentForm input:nth-of-type(2) {
-  margin-left: 0.8rem;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: $offWhite;
-  opacity: 1;
-}
-
-.commentForm textarea {
-  width: 100%;
-  height: 200px;
-  resize: none;
-  padding: 2rem 3rem;
-  margin-top: 2rem;
-}
-
-.nameAndEmail {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-button.btn {
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-}
-
-button.btn:focus,
-button.btn:hover {
-  cursor: pointer;
 }
 
 /* ----------MEDIA QUERIES---------- */
@@ -488,11 +492,6 @@ button.btn:hover {
 
   .comments {
     flex-basis: 100%;
-  }
-
-  .commentForm input {
-    padding: 0;
-    margin: 0;
   }
 }
 
@@ -604,21 +603,8 @@ button.btn:hover {
     margin-top: 2rem;
     padding: 1rem;
   }
-
-  .nameAndEmail {
-    flex-direction: column;
-  }
-
-  .commentForm input:nth-of-type(1),
-  .commentForm input:nth-of-type(2) {
-    margin: 0;
-  }
-
-  .commentForm textarea {
-    padding-top: 0.2rem;
-    padding-left: 0.1rem;
-  }
 }
+
 @media (max-width: 680px) {
   /* ---Home Page--- */
   .navbarLinks {
