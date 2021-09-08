@@ -1,8 +1,11 @@
+body {
+  color: $offWhite;
+  background: $black;
+}
+
 .contentContainer {
   max-width: 1650px;
   margin: 0 auto;
-  background: $black;
-  color: $offWhite;
 }
 
 h1,

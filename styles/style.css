@@ -337,10 +337,13 @@ textarea {
 }
 
 body {
+  color: #ffffff;
+  background: #111010;
+}
+
+.contentContainer {
   max-width: 1650px;
   margin: 0 auto;
-  background: #111010;
-  color: #ffffff;
 }
 
 h1,
@@ -662,7 +665,7 @@ footer p {
 .siteSummary i {
   background: #bf2603;
   padding: 0.5rem;
-  width: calc(2.4rem + 0.2vw);
+  width: 2.5rem;
   border-radius: 50%;
   text-align: center;
   font-size: 24px;
