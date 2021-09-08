@@ -332,6 +332,10 @@ textarea {
   letter-spacing: 1.9px;
 }
 
+.socials {
+  font-size: 30px;
+}
+
 body {
   max-width: 1650px;
   margin: 0 auto;
@@ -687,8 +691,8 @@ footer p {
 .planAheadImg img {
   position: relative;
   bottom: 2rem;
-  -webkit-box-shadow: 1.5rem 1.5rem #ff8327;
-          box-shadow: 1.5rem 1.5rem #ff8327;
+  -webkit-box-shadow: 1.2rem 1.2rem #ff8327;
+          box-shadow: 1.2rem 1.2rem #ff8327;
   width: 100%;
 }
 
@@ -700,8 +704,8 @@ footer p {
 }
 
 .newLocationsImg img {
-  -webkit-box-shadow: -1.5rem 1.5rem #ff8327;
-          box-shadow: -1.5rem 1.5rem #ff8327;
+  -webkit-box-shadow: -1.2rem 1.2rem #ff8327;
+          box-shadow: -1.2rem 1.2rem #ff8327;
   width: 100%;
 }
 
@@ -754,8 +758,8 @@ footer p {
 }
 
 .eventsImg img {
-  -webkit-box-shadow: -1.5rem 1.5rem #ff8327;
-          box-shadow: -1.5rem 1.5rem #ff8327;
+  -webkit-box-shadow: -1.2rem 1.2rem #ff8327;
+          box-shadow: -1.2rem 1.2rem #ff8327;
 }
 
 .eventsText {
@@ -818,24 +822,28 @@ footer p {
 }
 
 .missionText ul {
-  padding-left: 1rem;
-}
-
-.missionText li {
+  padding-left: 0.4rem;
   list-style: none;
 }
-.missionText li:before {
+.missionText ul li {
+  overflow: hidden;
+}
+
+.missionText li a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  margin: 0.1rem;
+}
+.missionText li a:before {
   content: "· ";
   font-size: 3rem;
   vertical-align: bottom;
   position: relative;
   top: 0.5rem;
   color: #bf2603;
-}
-
-.missionText li a {
-  text-decoration: none;
-  color: #ffffff;
 }
 .missionText li a:focus, .missionText li a:hover {
   color: #ff8327;
@@ -895,17 +903,17 @@ footer p {
 
 .newMenuImage img {
   width: 100%;
-  -webkit-box-shadow: -1.5rem 1.5rem #ff8327;
-          box-shadow: -1.5rem 1.5rem #ff8327;
+  -webkit-box-shadow: -1.2rem 1.2rem #ff8327;
+          box-shadow: -1.2rem 1.2rem #ff8327;
 }
 
 .newMenuText {
   position: relative;
-  bottom: 6rem;
-  right: 1.5rem;
+  bottom: 6.3rem;
+  right: 1.2rem;
   border-left: 5px solid #ff8327;
   border-bottom: 5px solid #ff8327;
-  padding: 4rem 4rem 4rem 6rem;
+  padding: 3.5rem 4rem 4rem 6rem;
 }
 
 .newMenuText p:nth-of-type(1) {
@@ -988,6 +996,11 @@ footer p {
   display: flex;
 }
 
+.formContainer {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
 .socialsContactContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1001,22 +1014,25 @@ footer p {
           align-items: center;
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
-  margin-top: 9rem;
+  margin-top: 8rem;
 }
 
-.socialsAndContactInfo .fab {
+.socialsAndContactInfo {
+  margin: 0 2rem;
+}
+
+.socials .fab {
   padding-right: 1rem;
   color: #ffffff;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.socialsAndContactInfo .fab:focus, .socialsAndContactInfo .fab:hover {
+.socials .fab:focus, .socials .fab:hover {
   color: #ff8327;
 }
 
 .socialsAndContactInfo p {
   margin: 0;
-  padding-bottom: 0.2rem;
 }
 .socialsAndContactInfo p a {
   text-decoration: none;
@@ -1032,15 +1048,25 @@ footer p {
 
 .socialsAndContactInfo p:nth-of-type(1) {
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.socialsAndContactInfo p span {
+  display: block;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .formContainer {
   background: #220303;
   position: relative;
   bottom: 6rem;
-  -webkit-box-shadow: 1.5rem 1.5rem #ff8327;
-          box-shadow: 1.5rem 1.5rem #ff8327;
+  -webkit-box-shadow: 1.2rem 1.2rem #ff8327;
+          box-shadow: 1.2rem 1.2rem #ff8327;
 }
 
 .contactForm {
@@ -1053,11 +1079,11 @@ footer p {
 }
 
 .contactForm input {
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 2.5px solid #ffffff;
 }
 
 .contactForm textarea {
-  border: 3px solid #ffffff;
+  border: 2.5px solid #ffffff;
   height: 250px;
 }
 
@@ -1067,6 +1093,44 @@ footer p {
 
 /* ----------MEDIA QUERIES---------- */
 /* Portrait tablet and small desktops */
+@media (max-width: 1150px) {
+  /* ---Contact Page--- */
+  .getInTouch {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .formContainer {
+    position: initial;
+    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+  }
+
+  .socialsContactContainer {
+    margin-top: 0.5rem;
+  }
+
+  .socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .socials .fab {
+    padding: 1rem;
+  }
+
+  .socialsAndContactInfo {
+    text-align: center;
+    margin: 1rem 2rem;
+  }
+
+  .contactForm button {
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 940px) {
   /* ---Home Page--- */
   .welcome {
@@ -1139,8 +1203,8 @@ footer p {
 
   .planAheadImg img,
 .newLocationsImg img {
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
-            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
   }
 
   .planAheadText {
@@ -1171,8 +1235,8 @@ footer p {
   }
 
   .eventsImg img {
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
-            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
   }
 
   .eventsText {
@@ -1190,8 +1254,8 @@ footer p {
 
   .mission {
     width: 100%;
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
-            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
     margin: 2rem 0;
   }
 
@@ -1209,8 +1273,8 @@ footer p {
   }
 
   .newMenuImage img {
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
-            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 0px 25px 15px rgba(255, 131, 39, 0.7);
+    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
   }
 
   .newMenuText {
