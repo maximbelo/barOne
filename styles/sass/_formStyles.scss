@@ -11,6 +11,7 @@
 .blogOneForm input {
   border: none;
   padding: 1rem 1.5rem;
+  width: 100%;
 }
 
 .blogOneForm input:nth-of-type(1) {
@@ -31,7 +32,7 @@ textarea::placeholder {
   width: 100%;
   height: 200px;
   resize: none;
-  padding: 2rem 3rem;
+  padding: 1.5rem 1.1rem;
   margin-top: 2rem;
 }
 
@@ -43,7 +44,8 @@ textarea::placeholder {
 button.btn {
   width: 100%;
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  border: none;
 }
 
 button.btn:focus,
@@ -53,7 +55,7 @@ button.btn:hover {
 
 @media (max-width: 940px) {
   .blogOneForm input {
-    padding: 0;
+    padding: 0 1rem;
     margin: 0;
   }
 }
@@ -62,6 +64,10 @@ button.btn:hover {
 @media (max-width: 768px) {
   .nameAndEmail {
     flex-direction: column;
+  }
+
+  .blogOneForm input {
+    padding: 0;
   }
 
   .blogOneForm input:nth-of-type(1),

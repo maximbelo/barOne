@@ -475,6 +475,7 @@ nav {
 .blogOneForm input {
   border: none;
   padding: 1rem 1.5rem;
+  width: 100%;
 }
 
 .blogOneForm input:nth-of-type(1) {
@@ -515,7 +516,7 @@ textarea::placeholder {
   width: 100%;
   height: 200px;
   resize: none;
-  padding: 2rem 3rem;
+  padding: 1.5rem 1.1rem;
   margin-top: 2rem;
 }
 
@@ -531,7 +532,8 @@ textarea::placeholder {
 button.btn {
   width: 100%;
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  border: none;
 }
 
 button.btn:focus,
@@ -541,7 +543,7 @@ button.btn:hover {
 
 @media (max-width: 940px) {
   .blogOneForm input {
-    padding: 0;
+    padding: 0 1rem;
     margin: 0;
   }
 }
@@ -552,6 +554,10 @@ button.btn:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .blogOneForm input {
+    padding: 0;
   }
 
   .blogOneForm input:nth-of-type(1),
@@ -654,7 +660,7 @@ footer p {
 .siteSummary i {
   background: #bf2603;
   padding: 0.5rem;
-  width: calc(2.4rem + 0.4vw);
+  width: calc(2.4rem + 0.2vw);
   border-radius: 50%;
   text-align: center;
   font-size: 24px;
@@ -929,13 +935,18 @@ footer p {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 4rem;
+  margin-right: 4rem;
 }
 
 .comments {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
   width: 100%;
+  position: relative;
+  bottom: 3rem;
+}
+.comments ul {
+  margin-top: 1rem;
 }
 .comments li {
   display: -webkit-box;
@@ -952,7 +963,7 @@ footer p {
 }
 
 .comments li:nth-of-type(2) {
-  margin: 5rem 0;
+  margin: 5rem 0 1rem 0;
 }
 
 .comment1 p:nth-of-type(1),
@@ -1079,16 +1090,12 @@ footer p {
 }
 
 .contactForm input {
-  border-bottom: 2.5px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
 
 .contactForm textarea {
-  border: 2.5px solid #ffffff;
+  border: 2px solid #ffffff;
   height: 250px;
-}
-
-.contactForm button {
-  border: none;
 }
 
 /* ----------MEDIA QUERIES---------- */
@@ -1104,8 +1111,8 @@ footer p {
 
   .formContainer {
     position: initial;
-    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
-            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+    width: 90%;
+    margin: 0 auto;
   }
 
   .socialsContactContainer {
@@ -1162,6 +1169,7 @@ footer p {
 
   .commentSection {
     padding: 0;
+    margin-right: 0;
   }
 
   .comments {
@@ -1190,21 +1198,26 @@ footer p {
 
   .siteSummary li p {
     padding: 0;
+    margin-bottom: 0;
   }
 
   .additionalInfo {
     grid-template-columns: 1fr;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
   }
 
   .gridItem4 {
     grid-row: 3/4;
   }
 
-  .planAheadImg img,
-.newLocationsImg img {
-    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
-            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+  .planAheadImg,
+.newLocationsImg {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .planAheadImg img {
+    position: initial;
   }
 
   .planAheadText {
@@ -1220,6 +1233,7 @@ footer p {
   .newLocationsText {
     text-align: center;
     margin-left: 0;
+    margin-top: 0;
     padding: 0 3%;
   }
 
@@ -1232,11 +1246,6 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .eventsImg img {
-    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
-            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
   }
 
   .eventsText {
@@ -1254,13 +1263,11 @@ footer p {
 
   .mission {
     width: 100%;
-    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
-            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
-    margin: 2rem 0;
   }
 
   .missionContainer {
-    margin-right: 4%;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .newMenu {
@@ -1270,21 +1277,18 @@ footer p {
   .newMenuImage,
 .newMenuText {
     position: initial;
-  }
-
-  .newMenuImage img {
-    -webkit-box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
-            box-shadow: -10px 0px 13px -7px #000, 10px 0px 13px -7px #000, 0px 0px 25px 15px rgba(255, 133, 39, 0.89);
+    width: 85%;
+    margin: 0 auto;
   }
 
   .newMenuText {
-    border: 2px solid #ff8327;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .comments {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 1rem;
+    position: initial;
   }
 }
 @media (max-width: 680px) {
@@ -1336,6 +1340,7 @@ footer p {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+
   .comments li img {
     height: auto;
   }
