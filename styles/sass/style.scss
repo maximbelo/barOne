@@ -116,7 +116,7 @@
 }
 
 .planAheadText {
-  margin-right: 5%;
+  margin-right: 15%;
 
   h3 {
     padding-top: 10%;
@@ -130,7 +130,7 @@
 
 .newLocationsText {
   text-align: right;
-  margin-left: 5%;
+  margin-left: 15%;
   margin-top: 10%;
 }
 
@@ -481,6 +481,11 @@
 /* ----------MEDIA QUERIES---------- */
 /* Portrait tablet and small desktops */
 @media (max-width: 1150px) {
+  /* ---Blog Page--- */
+  .newMenuText {
+    padding: 2rem;
+  }
+
   /* ---Contact Page--- */
   .getInTouch {
     flex-direction: column-reverse;
@@ -526,51 +531,6 @@
 
   .siteSummary {
     margin-top: 0;
-  }
-  /* ---Blog Page--- */
-  .missionContainer {
-    padding: 0;
-    margin: 4% 7% 0% 3.5%;
-  }
-
-  .newMenuText {
-    padding: 3rem 2rem 3rem 2rem;
-  }
-
-  .missionImage img {
-    width: 100%;
-    position: initial;
-  }
-
-  .commentSection {
-    padding: 0;
-    margin-right: 0;
-  }
-
-  .comments {
-    flex-basis: 100%;
-  }
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-  /* ---Home Page--- */
-  .siteSummary {
-    margin-top: 0;
-    padding: 12% 5% 12% 5%;
-  }
-
-  .siteSummary ul {
-    flex-direction: column;
-  }
-
-  .siteSummary li {
-    text-align: center;
-  }
-
-  .siteSummary li p {
-    padding: 0;
-    margin-bottom: 0;
   }
 
   .additionalInfo {
@@ -623,8 +583,59 @@
   }
 
   /* ---Blog Page--- */
-  .missionAndNewMenu {
+  .missionContainer {
+    padding: 0;
+    margin: 4% 7% 0% 3.5%;
+    flex-basis: 40%;
+  }
+
+  .mission {
+    width: 100%;
+  }
+
+  .newMenu {
+    flex-basis: 60%;
+  }
+
+  .missionImage img {
+    width: 100%;
+    position: initial;
+  }
+
+  .commentSection {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  .comments {
+    flex-basis: 100%;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  /* ---Home Page--- */
+  .siteSummary {
+    margin-top: 0;
+    padding: 12% 5% 12% 5%;
+  }
+
+  .siteSummary ul {
     flex-direction: column;
+  }
+
+  .siteSummary li {
+    text-align: center;
+  }
+
+  .siteSummary li p {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  /* ---Blog Page--- */
+  .missionAndNewMenu {
+    flex-direction: column-reverse;
   }
 
   .mission {
@@ -632,8 +643,8 @@
   }
 
   .missionContainer {
-    width: 80%;
-    margin: 0 auto;
+    width: 85%;
+    margin: 1rem auto;
   }
 
   .newMenu {
@@ -645,6 +656,14 @@
     position: initial;
     width: 85%;
     margin: 0 auto;
+  }
+
+  .missionImage img {
+    box-shadow: 1.2rem 1.2rem $dustyOrange;
+  }
+
+  .missionText h2:nth-of-type(1) {
+    margin-top: 2rem;
   }
 
   .newMenuText {
