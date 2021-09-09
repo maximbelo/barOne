@@ -295,7 +295,7 @@ h1 {
 .blogWelcome h1,
 .contactWelcome h1 {
   font-family: "Chathura", sans-serif;
-  font-size: 83.2px;
+  font-size: 100px;
   font-weight: bold;
   text-align: left;
   line-height: 94.7px;
@@ -371,7 +371,7 @@ ul {
   text-align: center;
   color: #ffffff;
   background: #bf2603;
-  padding: 0.8rem 2.1rem;
+  padding: 0.8rem 2.5rem;
   -webkit-transition: color, background-color 0.3s ease;
   transition: color, background-color 0.3s ease;
 }
@@ -404,7 +404,7 @@ nav {
 }
 .navbarLinks ul li {
   list-style: none;
-  padding: 1rem;
+  padding: 1rem 1.7rem;
 }
 .navbarLinks ul a {
   text-decoration: none;
@@ -427,6 +427,19 @@ nav {
 }
 
 /* ----------Media Queries---------- */
+@media (max-width: 768px) {
+  .navbarLinks {
+    margin-bottom: 2rem;
+  }
+
+  .navbarLinks ul li {
+    padding: 1rem;
+  }
+
+  .brandTitle {
+    padding: 1rem 0.5rem;
+  }
+}
 @media (max-width: 600px) {
   .navbarLinks ul {
     display: none;
@@ -443,6 +456,7 @@ nav {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .hamburgerMenu .fas {
@@ -552,7 +566,6 @@ button.btn:hover {
     margin: 0;
   }
 }
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .nameAndEmail {
     -webkit-box-orient: vertical;
@@ -609,12 +622,6 @@ footer p {
 }
 
 .welcomeTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 15%;
   position: absolute;
   z-index: 2;
@@ -1101,6 +1108,7 @@ footer p {
 .contactForm textarea {
   border: 2px solid #ffffff;
   height: 250px;
+  padding: 2.5rem 1.1rem;
 }
 
 /* ----------MEDIA QUERIES---------- */
@@ -1316,17 +1324,15 @@ footer p {
     padding: 1rem;
     position: initial;
   }
+
+  /* ---Contact Page--- */
+  .contactForm textarea {
+    padding-top: 0.2rem;
+    padding-left: 0.1rem;
+  }
 }
 @media (max-width: 680px) {
   /* ---Home Page--- */
-  .navbarLinks {
-    margin-bottom: 2rem;
-  }
-
-  .brandTitle {
-    padding: 1rem 0.2rem;
-  }
-
   .imageGallery {
     padding: 14% 0;
   }

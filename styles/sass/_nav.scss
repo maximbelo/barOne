@@ -11,7 +11,7 @@ nav {
 
   li {
     list-style: none;
-    padding: 1rem;
+    padding: 1rem 1.7rem;
   }
 
   a {
@@ -36,6 +36,20 @@ nav {
 }
 
 /* ----------Media Queries---------- */
+@media (max-width: 768px) {
+  .navbarLinks {
+    margin-bottom: 2rem;
+  }
+
+  .navbarLinks ul li {
+    padding: 1rem;
+  }
+
+  .brandTitle {
+    padding: 1rem 0.5rem;
+  }
+}
+
 @media (max-width: 600px) {
   .navbarLinks ul {
     display: none;
@@ -46,6 +60,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .hamburgerMenu .fas {
