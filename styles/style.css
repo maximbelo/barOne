@@ -438,9 +438,16 @@ nav {
   transition: all 0.6s ease-in-out;
 }
 
+.hamburgerMenu:hover .line,
+.hamburgerMenu:focus .line {
+  background: #ff8327;
+}
+
 .burgerBrandTitle {
   display: none;
-  margin-left: 2rem;
+}
+.burgerBrandTitle p {
+  margin-left: 3.8rem;
 }
 
 /* ---Media Queries--- */
@@ -455,6 +462,7 @@ nav {
             justify-content: space-between;
     margin: 0;
     background: rgba(0, 0, 0, 0.85);
+    padding: 0 1rem;
   }
 
   .navbar {
@@ -497,6 +505,8 @@ nav {
 
   .burgerBrandTitle {
     display: block;
+    position: relative;
+    right: 41%;
   }
 }
 /* ---Toggler to display navbarLinks on the page--- */
@@ -530,7 +540,6 @@ nav {
             transform: translateX(0px);
   }
 }
-/* ---Hamburger menu styling--- */
 .animate .line1 {
   -webkit-transform: rotateZ(-405deg) translate(-5px, 6px);
           transform: rotateZ(-405deg) translate(-5px, 6px);

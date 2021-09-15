@@ -46,9 +46,17 @@ nav {
   }
 }
 
+.hamburgerMenu:hover .line,
+.hamburgerMenu:focus .line {
+  background: $dustyOrange;
+}
+
 .burgerBrandTitle {
   display: none;
-  margin-left: 2rem;
+
+  p {
+    margin-left: 3.8rem;
+  }
 }
 
 /* ---Media Queries--- */
@@ -61,6 +69,7 @@ nav {
     justify-content: space-between;
     margin: 0;
     background: rgba(0, 0, 0, 0.85);
+    padding: 0 1rem;
   }
 
   .navbar {
@@ -96,6 +105,8 @@ nav {
 
   .burgerBrandTitle {
     display: block;
+    position: relative;
+    right: 41%;
   }
 }
 
@@ -115,19 +126,6 @@ nav {
     transform: translateX(0px);
   }
 }
-
-/* ---Hamburger menu styling--- */
-// .animate .line1 {
-//   transform: rotate(-45deg) translate(-5px, 6px);
-// }
-
-// .animate .line2 {
-//   opacity: 0;
-// }
-
-// .animate .line3 {
-//   transform: rotate(45deg) translate(-5px, -6px);
-// }
 
 .animate .line1 {
   transform: rotateZ(-405deg) translate(-5px, 6px);
