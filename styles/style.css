@@ -279,7 +279,8 @@ header nav {
   font-weight: bold;
 }
 
-.brandTitle {
+.brandTitle,
+.burgerBrandTitle {
   font-family: "Tulpen One", cursive;
   font-size: 45px;
 }
@@ -382,6 +383,7 @@ ul {
   color: #bf2603;
 }
 
+/* ---Full Screen Nav--- */
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,9 +394,10 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 5%;
+  min-height: 8vh;
 }
 
-.navbarLinks ul {
+.navbarLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,19 +405,20 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
-.navbarLinks ul li {
+.navbarLinks li {
   list-style: none;
   padding: 1rem 1.7rem;
+  text-transform: uppercase;
 }
-.navbarLinks ul a {
+.navbarLinks a {
   text-decoration: none;
   display: block;
   color: #ffffff;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.navbarLinks ul a:focus,
-.navbarLinks ul a:hover {
+.navbarLinks a:focus,
+.navbarLinks a:hover {
   color: #ff8327;
 }
 
@@ -422,59 +426,121 @@ nav {
   padding: 2rem;
 }
 
+/* ---Hamburger Menu--- */
 .hamburgerMenu {
   display: none;
 }
-
-/* ----------Media Queries---------- */
-@media (max-width: 768px) {
-  .navbarLinks {
-    margin-bottom: 2rem;
-  }
-
-  .navbarLinks ul li {
-    padding: 1rem;
-  }
-
-  .brandTitle {
-    padding: 1rem 0.5rem;
-  }
+.hamburgerMenu div {
+  width: 30px;
+  height: 3px;
+  background: #ffffff;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-@media (max-width: 600px) {
-  .navbarLinks ul {
-    display: none;
+
+.burgerBrandTitle {
+  display: none;
+  margin-left: 2rem;
+}
+
+/* ---Media Queries--- */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
   }
 
-  .hamburgerMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 100%;
+  }
+
+  .navbar {
     margin-bottom: 2rem;
   }
 
-  .hamburgerMenu .fas {
-    font-size: 30px;
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+  .navbarLinks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: rgba(0, 0, 0, 0.8);
+    width: 35%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.4s ease-in;
+    transition: -webkit-transform 0.4s ease-in;
+    transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
   }
 
-  .hamburgerMenu .fas:focus,
-.hamburgerMenu .fas:hover {
-    color: #ff8327;
+  .navbarLinks li {
+    padding: 1rem;
+    opacity: 0;
+  }
+
+  .hamburgerMenu {
+    display: block;
     cursor: pointer;
   }
 
   .brandTitle {
-    padding: 2rem 0;
+    display: none;
+  }
+
+  .burgerBrandTitle {
+    display: block;
   }
 }
+.navActive {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+.animate .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.animate .line2 {
+  opacity: 0;
+}
+
+.animate .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .blogOneForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,6 +1323,14 @@ footer p {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   /* ---Home Page--- */
+  .welcome {
+    position: initial;
+  }
+
+  .navActive {
+    z-index: 3;
+  }
+
   .siteSummary {
     margin-top: 0;
     padding: 12% 5% 12% 5%;
