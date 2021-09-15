@@ -615,14 +615,6 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   /* ---Home Page--- */
-  .welcome {
-    position: initial;
-  }
-
-  .navActive {
-    z-index: 3;
-  }
-
   .siteSummary {
     margin-top: 0;
     padding: 12% 5% 12% 5%;
