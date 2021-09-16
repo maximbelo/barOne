@@ -464,7 +464,7 @@ nav {
     margin: 0;
     background: rgba(17, 16, 16, 0.9);
     padding: 0 1rem;
-    height: 70px;
+    height: 60px;
     width: 100%;
     z-index: 100;
   }
@@ -481,7 +481,7 @@ nav {
     position: absolute;
     right: 0px;
     height: 100vh;
-    top: 70px;
+    top: 60px;
     background: rgba(17, 16, 16, 0.9);
     width: 35%;
     -webkit-transform: translateX(100%);
@@ -1365,6 +1365,11 @@ footer p {
     margin-bottom: 0;
   }
 
+  .blogWelcome h1,
+.contactWelcome h1 {
+    font-size: 85px;
+  }
+
   /* ---Blog Page--- */
   .missionAndNewMenu {
     -webkit-box-orient: vertical;
@@ -1420,6 +1425,10 @@ footer p {
 }
 @media (max-width: 680px) {
   /* ---Home Page--- */
+  .welcomeTitle {
+    padding-top: 25%;
+  }
+
   .imageGallery {
     padding: 14% 0;
   }

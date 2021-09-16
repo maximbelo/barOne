@@ -637,6 +637,11 @@
     margin-bottom: 0;
   }
 
+  .blogWelcome h1,
+  .contactWelcome h1 {
+    font-size: 85px;
+  }
+
   /* ---Blog Page--- */
   .missionAndNewMenu {
     flex-direction: column-reverse;
@@ -689,6 +694,10 @@
 
 @media (max-width: 680px) {
   /* ---Home Page--- */
+  .welcomeTitle {
+    padding-top: 25%;
+  }
+
   .imageGallery {
     padding: 14% 0;
   }
