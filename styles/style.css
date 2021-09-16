@@ -457,12 +457,16 @@ nav {
   }
 
   nav {
+    position: fixed;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(17, 16, 16, 0.9);
     padding: 0 1rem;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
   }
 
   .navbar {
@@ -476,9 +480,9 @@ nav {
             flex-direction: column;
     position: absolute;
     right: 0px;
-    height: 100%;
-    top: 100px;
-    background: rgba(0, 0, 0, 0.85);
+    height: 100vh;
+    top: 70px;
+    background: rgba(17, 16, 16, 0.9);
     width: 35%;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -1336,6 +1340,10 @@ footer p {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   /* ---Home Page--- */
+  .welcome {
+    padding: 45% 0;
+  }
+
   .siteSummary {
     margin-top: 0;
     padding: 12% 5% 12% 5%;

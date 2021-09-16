@@ -615,6 +615,10 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   /* ---Home Page--- */
+  .welcome {
+    padding: 45% 0;
+  }
+
   .siteSummary {
     margin-top: 0;
     padding: 12% 5% 12% 5%;
