@@ -361,7 +361,7 @@ ul {
 
 .blogWelcome,
 .contactWelcome {
-  margin: 10% 5%;
+  margin: 10% 6%;
   display: inline-block;
 }
 
@@ -447,7 +447,7 @@ nav {
   display: none;
 }
 .burgerBrandTitle p {
-  margin-left: 3.8rem;
+  margin-left: 3.5rem;
 }
 
 /* ---Media Queries--- */
@@ -509,8 +509,6 @@ nav {
 
   .burgerBrandTitle {
     display: block;
-    position: relative;
-    right: 41%;
   }
 }
 /* ---Toggler to display navbarLinks on the page--- */
@@ -1471,11 +1469,5 @@ footer p {
 
   .comments li img {
     height: auto;
-  }
-
-  /* ---Blog Page and Contact Page--- */
-  .blogWelcome,
-.contactWelcome {
-    margin: 10% 4%;
   }
 }
